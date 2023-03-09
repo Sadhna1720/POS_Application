@@ -1,0 +1,39 @@
+ <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+ "http://www.springframework.org/dtd/spring-beans-2.0.dtd"> 
+<beans>
+  	 <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+ 		<property name="mappings">
+ 			<props>
+ 				<prop key="/categoryAdd.ds">categoryController</prop>
+ 				<prop key="/categoryList.ds">categoryController</prop>
+ 				<prop key="/customer.ds">customerController</prop>
+ 				<prop key="/inventory.ds">inventoryController</prop>
+ 				<prop key="/logout.ds">logoutController</prop>
+ 				<prop key="/login.ds">loginController</prop>
+ 				<prop key="/supplierAdd.ds">supplierController</prop>
+ 				<prop key="/supplierList.ds">supplierController</prop>
+ 				<prop key="/productList.ds">productController</prop>
+ 				<prop key="/productAdd.ds">productController</prop>
+ 				<prop key="/purchase.ds">purchaseController</prop>
+ 				<prop key="/reportPurchase.ds">reportController</prop>
+ 				<prop key="/reportSales.ds">reportController</prop>
+ 				<prop key="/sales.ds">salesController</prop>
+ 			</props>
+ 		</property>
+ 	</bean>
+ 	<bean id="loginController" class="controllers.LoginController"/>
+ 	<bean id="categoryController" class="controllers.CategoryController"/>
+ 	<bean id="customerController" class="controllers.CustomerController"/>
+ 	<bean id="logoutController" class="controllers.LogoutController"/>
+ 	<bean id="inventoryController" class="controllers.InventoryController"/>
+ 	<bean id="supplierController" class="controllers.SupplierController"/>
+ 	<bean id="productController" class="controllers.ProductController"/>
+ 	<bean id="purchaseController" class="controllers.PurchaseController"/>
+ 	<bean id="reportController" class="controllers.ReportController"/>
+ 	<bean id="salesController" class="controllers.SalesController"/>
+ 	
+ 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+ 		<property name="prefix" value="/"/>
+ 		<property name="suffix" value=".jsp"/>
+ 	</bean> 
+ </beans>
