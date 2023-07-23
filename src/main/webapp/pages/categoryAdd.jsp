@@ -19,20 +19,22 @@
 	
 	<%@include file="navbar.jsp"%>
 	<div class="main container table-responsive "style="padding: 90px 26px 0px 331px;text-align:center;">
-		<div class="container rounded  border border-2  mb-3" style="height: 260px; margin-left: 1%;width:96%">
-				<div class="row">
-					<div class="col heading fs-4 "  >
-						<label style="padding: 59px 0 5px 250px;"> Category</label>
+		<form action="categoryAdd.ds">
+			<div class="container rounded  border border-2  mb-3" style="height: 260px; margin-left: 1%;width:96%">
+					<div class="row">
+						<div class="col heading fs-4 "  >
+							<label style="padding: 59px 0 5px 250px;"> Category</label>
+						</div>
+						<div class=" col inner" style="padding: 63px 200px 5px 0;">
+							<input type="text" name="category" id="category"  placeholder="Oil" style="padding: 5px 21px 5px 21px;">
+						</div>
 					</div>
-					<div class=" col inner" style="padding: 63px 200px 5px 0;">
-						<input type="text" name="category" id="category"  placeholder="Oil" style="padding: 5px 21px 5px 21px;">
+					<div class="row" style="font-family: Serif; color: white;padding: 60px 0px 0px 210px;">
+						<input type="Submit" value="ADD" class="btn btn"
+							style="background-color: #3f78cc; font-family: Serif; color: white; width: 70%;align-items:center; margin-bottom: 5%;">
 					</div>
-				</div>
-				<div class="row" style="font-family: Serif; color: white;padding: 60px 0px 0px 210px;">
-					<input type="Submit" value="ADD" class="btn btn"
-						style="background-color: #3f78cc; font-family: Serif; color: white; width: 70%;align-items:center; margin-bottom: 5%;">
-				</div>
-		  </div>
+			  </div>
+		  </form>
 	</div>
 
 	<script

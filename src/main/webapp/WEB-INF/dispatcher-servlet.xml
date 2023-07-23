@@ -6,18 +6,38 @@
  			<props>
  				<prop key="/categoryAdd.ds">categoryController</prop>
  				<prop key="/categoryList.ds">categoryController</prop>
- 				<prop key="/customer.ds">customerController</prop>
+ 				
+ 				<prop key="/customerAdd.ds">customerController</prop>
+ 				<prop key="/customerList.ds">customerController</prop>
+ 				
  				<prop key="/inventory.ds">inventoryController</prop>
+ 				
  				<prop key="/logout.ds">logoutController</prop>
  				<prop key="/login.ds">loginController</prop>
+ 				
  				<prop key="/supplierAdd.ds">supplierController</prop>
  				<prop key="/supplierList.ds">supplierController</prop>
+ 				
  				<prop key="/productList.ds">productController</prop>
  				<prop key="/productAdd.ds">productController</prop>
+ 				
  				<prop key="/purchase.ds">purchaseController</prop>
+ 				
  				<prop key="/reportPurchase.ds">reportController</prop>
  				<prop key="/reportSales.ds">reportController</prop>
+ 				<prop key="/purchaseReportExport.ds">reportController</prop>
+ 				<prop key="/salesReportExport.ds">reportController</prop>
+ 				
  				<prop key="/sales.ds">salesController</prop>
+ 				
+ 				<prop key="/editCategory.ds">categoryController</prop>
+ 				<prop key="/deleteCategory.ds">categoryController</prop>
+ 				
+ 				<prop key="/redirectPurchase.ds">purchaseController</prop>
+ 				<prop key="/redirectCategoryAdd.ds">categoryController</prop>
+ 				<prop key="/redirectProductAdd.ds">productController</prop>
+ 				<prop key="/redirectSupplierAdd.ds">supplierController</prop>
+ 				<prop key="/redirectCustomerAdd.ds">customerController</prop>
  			</props>
  		</property>
  	</bean>

@@ -76,9 +76,16 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var="b" items="${test}">
+						<%	
+						int i = 0;
+						%>
+						<c:forEach var="b" items="${productList}">
 							<tr>
-								<th scope="row">${b}</th>
+								<td><%=++i%></td>
+								<td>${b.name}</td>
+								<td>${b.productId}</td>
+								<td>${b.category}</td>
+								<td>${b.qty}</td>
 							</tr>
 						</c:forEach>
 					</tbody>

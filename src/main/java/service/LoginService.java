@@ -15,28 +15,29 @@ public class LoginService {
 		HttpSession session = req.getSession();
 		DBConnection dbConnection=(DBConnection)applicationContext.getBean("dbConnectionService");
 		VariableService variableService=((VariableService)applicationContext.getBean("variableService"));
-		dbConnection.connectionMethod();
-		Boolean flag = null ;
+		dbConnection.connectionMethod();  // calling connectionMethod() for establish connection
+		Boolean flag = false ;
 		variableService.setId((req.getParameter("UserId")));
 		variableService.setPassword((req.getParameter("Password")));
-		ResultSet resultSet = (dbConnection.resultData(variableService.getId(),"select * from posLogin where userId=?"));
+		
+		// calling resultData() for retrieve person details
+		ResultSet resultSet = (dbConnection.resultData("select * from posLogin where userId='"+variableService.getId()+"'"));
 		try {
 			if (resultSet.next()) {
 				String dbUserid = resultSet.getString("UserId");
 				String dbPass = resultSet.getString("Password");
 
 				if (variableService.getId().equalsIgnoreCase(dbUserid) && variableService.getPassword().equals(dbPass))
-					flag = true;;
+					flag = true;
 				
 				if (flag == true) {
 					String loginSession = variableService.getId();
 					session.setAttribute("loginSession", loginSession);
-					return true;
 				}
 			}
 		}catch(Exception e){
 			System.out.println("Login Service Catch.....  "+ e);
 		}
-		return false;
+		return flag;
 	}
 }

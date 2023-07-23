@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!doctype html>
 <html lang="en">
@@ -26,24 +26,25 @@
 <body>
 	<%@include file="navbar.jsp"%>
 
-	<div style="padding:192px 192px 0px 476px;">
-		<div class="container rounded border border-2 "
-			style="padding: 42px 111px 0px 90px;">
-			<div class="row" style="">
-				<div class="col center">
-					<div class="  fw-bold">
-						<label>Product Name</label>
-					</div>
-					<div class="inner mt-3">
-						<input type="text" name="pName" id="pName">
-					</div>
+	<div style="padding: 192px 192px 0px 476px;">
+		<form action="productAdd.ds">
+			<div class="container rounded border border-2 "
+				style="padding: 42px 111px 0px 90px;">
+				<div class="row" style="">
+					<div class="col center">
+						<div class="  fw-bold">
+							<label>Product Name</label>
+						</div>
+						<div class="inner mt-3">
+							<input type="text" name="productName" id="productName">
+						</div>
 					</div>
 					<div class="col center">
 						<div class="  fw-bold">
 							<label>Product ID</label>
 						</div>
 						<div class="inner mt-3">
-							<input type="text" name="pId" id="pId">
+							<input type="text" name="productId" id="productId">
 						</div>
 					</div>
 				</div>
@@ -53,7 +54,7 @@
 							<label>Selling Price</label>
 						</div>
 						<div class="inner mt-3">
-							<input type="text" name="sPrice" id="sPrice">
+							<input type="text" name="sellPrice" id="sellPrice">
 						</div>
 					</div>
 					<div class="col center">
@@ -65,25 +66,31 @@
 						</div>
 					</div>
 				</div>
-				<div class="row center" style="margin-top:-34px;">
-						<div class="  fw-bold">
-							<label>Category</label>
-						</div>
-						<div class="inner mt-2">
-							<div style="font-family: Serif; color: white;">
-								<select class="dropdown select btn btn-secondary dropdown-toggle " name="category"
-											id="category" style=" padding: 10px 56px 10px 56px;">
-											<option disabled selected hidden>Select</option>
-											<c:forEach var="category" items="${category}">
-												<option>${category}</option>
-											</c:forEach></select>
-							</div>
+				<div class="row center" style="margin-top: -34px;">
+					<div class="  fw-bold">
+						<label>Category</label>
+					</div>
+					<div class="inner mt-2">
+						<div style="font-family: Serif; color: white;">
+							<select
+								class="dropdown select btn btn-secondary dropdown-toggle "
+								name="category" id="category"
+								style="padding: 10px 56px 10px 56px;">
+								<option disabled selected hidden>Select</option>
+								<c:forEach var="category" items="${categoryList}">
+									<option>${category}</option>
+								</c:forEach>
+							</select>
 						</div>
 					</div>
-				<div class="row" style="padding: 22px 112px 46px 94px;">
-					<button type="button" style="padding: 8px 40px 15px 40px;margin-left:5%;" class="btn btn-outline-primary">ADD</button>
 				</div>
-		</div>
+				<div class="row" style="padding: 22px 112px 46px 94px;">
+					<input type="submit"
+						style="padding: 8px 40px 15px 40px; margin-left: 5%;" value="ADD"
+						class="btn btn-outline-primary">
+				</div>
+			</div>
+		</form>
 	</div>
 
 	<script

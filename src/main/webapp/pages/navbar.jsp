@@ -122,7 +122,7 @@ svg:hover {
 		<div class="row dropdown">
 			<c>Category</c>
 			<div class="dropdown-content">
-				<a href="./categoryAdd.ds">Add Category</a> <a
+				<a href="./redirectCategoryAdd.ds">Add Category</a> <a
 					href="./categoryList.ds">View Category</a>
 			</div>
 		</div>
@@ -130,27 +130,30 @@ svg:hover {
 		<div class="row dropdown">
 			<c>Product</c>
 			<div class="dropdown-content">
-				<a href="./productAdd.ds">Add Product</a> <a href="./productList.ds">View
-					Products</a>
+				<a href="./redirectProductAdd.ds">Add Product</a> 
+				<a href="./productList.ds">View Products</a>
 			</div>
 		</div>
 		<hr>
 		<div class="row dropdown">
 			<c>
-			<a href="./purchase.ds">Purchase</a> </c>
+			<a href="./redirectPurchase.ds">Purchase</a> </c>
 		</div>
 		<hr>
 		<div class="row dropdown">
 			<c>Supplier</c>
 			<div class="dropdown-content">
-				<a href="./supplierAdd.ds">Add Supplier</a> <a
+				<a href="./redirectSupplierAdd.ds">Add Supplier</a> <a
 					href="./supplierList.ds">View List</a>
 			</div>
 		</div>
 		<hr>
 		<div class="row dropdown">
-			<c>
-			<a href="customer.ds">Customers</a></c>
+			<c>Customer</c>
+			<div class="dropdown-content">
+				<a href="./redirectCustomerAdd.ds">Customer Add</a> <a
+					href="./customerList.ds">View List</a>
+			</div>
 		</div>
 		<hr>
 		<div class="row dropdown">

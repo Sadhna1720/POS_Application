@@ -4,5 +4,14 @@
 <beans>
 	<bean id="loginService" class="service.LoginService"/>
 	<bean id="dbConnectionService" class="service.DBConnection"/>
+	<bean id="salesController" class="controllers.SalesController"/>
 	<bean id="variableService" class="service.VariableService"/>
+	<bean id="categoryService" class="service.CategoryService"/>
+	<bean id="productService" class="service.ProductService"/>
+	<bean id="purchaseService" class="service.PurchaseService"/>
+	<bean id="supplierService" class="service.SupplierService"/>
+	<bean id="customerService" class="service.CustomerService"/>
+	<bean id="reportService" class="service.ReportService"/>
+	<bean id="inventoryService" class="service.InventoryService"/>
+	<bean id="salesService" class="service.SalesService"/>
 </beans>

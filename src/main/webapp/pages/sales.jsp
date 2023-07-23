@@ -46,7 +46,7 @@
 <body>
 
 	<%@include file="navbar.jsp"%>
-	<div style="padding: 150px 0px 25px 299px;height: 100%;">
+	<div style="padding: 170px 0px 0px 299px; height: 100%;">
 		<div class="row ms-3 " style="width: 94%;">
 			<div class="col-8">
 				<div class="container row" style="width: auto;">
@@ -70,9 +70,17 @@
 							</tr>
 						</thead>
 						<tbody>
-							<c:forEach var="b" items="${test}">
+						<%	
+						int i = 0;
+						%>
+							<c:forEach var="b" items="${salesList}">
 								<tr>
-									<th scope="row">${b}</th>
+									<td><%=++i%></td>
+									<td>${b.name}</td>
+									<td>${b.productId}</td>
+									<td>${b.category}</td>
+									<td></td>
+									<td>${b.sellingPrice}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
@@ -80,7 +88,7 @@
 				</div>
 			</div>
 			<div class="col-4 rounded container border border-3 fs-4"
-				style="padding: 40px;">
+				style="padding:31px 40px 25px 40px;">
 
 				<div class="row">
 					<div class="col">
@@ -111,15 +119,13 @@
 					<div class="col"></div>
 				</div>
 				<hr>
-				<div class="row">
-					<select class="dropdown select btn btn-secondary dropdown-toggle"
-						name="customerDetails" id="customerDetails">
-						<option disabled selected hidden>Customer details</option>
-						<option><label>customer name</label></option>
-						<option><label>contact</label></option>
-						<option><label>city</label></option>
-					</select><input type="text">
-				</div> 
+				<div class=" row" >
+					<form class="d-flex" role="search">
+						<input class="form-control" type="search" placeholder="Search customer name/contact"
+							aria-label="Search">
+						 <!-- <button class="btn btn-outline-primary" type="submit">Search</button>  -->
+					</form>
+				</div>
 				<hr>
 				<div class="row">
 					<select class="dropdown select btn btn-secondary dropdown-toggle"
@@ -130,37 +136,13 @@
 						</c:forEach>
 					</select>
 				</div>
-				
-			<!-- 				<div class="row">
-									<div class="col">
-										<label>Customer name</label>
-									</div>
-									<div class="col">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<label>Contact</label>
-									</div>
-									<div class="col">
-										<input type="text" name="customerContact" id="cuatomerContact">
-									</div>
-								</div>
-								<div class="row">
-									<div class="col">
-										<label>City</label>
-									</div>
-									<div class="col">
-										<input type="text" name="customerAddress" id="cuatomerAddress">
-									</div>
-								</div>	      -->
 				<hr>
 				<div class="row">
-					<button type="button" style="padding: 15px 40px 15px 40px;"
+					<button type="button" style="padding: 12px 40px 12px 40px;"
 						class="btn btn-outline-success">Done</button>
 				</div>
 				<div class="row mt-2">
-					<button type="button" style="padding: 15px 40px 15px 40px;"
+					<button type="button" style="padding: 12px 40px 12px 40px;"
 						class="btn btn-outline-danger">Cancel</button>
 				</div>
 			</div>

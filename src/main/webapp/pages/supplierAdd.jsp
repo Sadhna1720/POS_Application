@@ -24,43 +24,46 @@
 <body>
 	<%@include file="navbar.jsp"%>
 	<div class=" main">
-		
-		<div class="border border-2"style="margin: 162px;">
-			<div class="container rounded row " style="padding: 25px 45px 0px 45px;">
-				<div class="col center">
-					<div class=" heading fw-bold">
-						<label>Supplier Name</label>
+		<form action="supplierAdd.ds">
+			<div class="border border-2" style="margin: 162px;">
+				<div class="container rounded row "
+					style="padding: 25px 45px 0px 45px;">
+					<div class="col center">
+						<div class=" heading fw-bold">
+							<label>Supplier Name</label>
+						</div>
+						<div class="inner mt-3">
+							<input type="text" name="supplierName" id="supplierName">
+						</div>
 					</div>
-					<div class="inner mt-3">
-						<input type="text" name="supplierName" id="supplierName">
-					</div>
-				</div>
-				<div class="col center">
-					<div class=" heading fw-bold">
-						<label>Contact number</label>
-					</div>
-					<div class="inner mt-3 ">
-						<input type="text" name="supplierContact" id="supplierContact">
-					</div>
-				</div>
-			</div>
-			<div class="row" style="padding: 0px 45px 21px 45px;">
-				<div class="col center">
-					<div class=" heading fw-bold">
-						<label>Address</label>
-					</div>
-					<div class="inner mt-3">
-						<textarea id="supplierAddress" name="supplierAddress" rows="2"
-							cols="25"></textarea>
+					<div class="col center">
+						<div class=" heading fw-bold">
+							<label>Contact number</label>
+						</div>
+						<div class="inner mt-3 ">
+							<input type="text" name="supplierContact" id="supplierContact">
+						</div>
 					</div>
 				</div>
-				<div class="col center" style="font-family: Serif; color: white;">
-					<input type="Submit" value="ADD" class="btn btn"
-						style="background-color: #3f78cc; font-family: Serif; color: white; width: 52%; margin-left: 1%; margin-top: 15%; margin-bottom: 5%;">
+				<div class="row" style="padding: 0px 45px 21px 45px;">
+					<div class="col center">
+						<div class=" heading fw-bold">
+							<label>Address</label>
+						</div>
+						<div class="inner mt-3">
+							<textarea id="supplierAddress" name="supplierAddress" rows="2"
+								cols="25"></textarea>
+						</div>
+					</div>
+					<div class="col center" style="font-family: Serif; color: white;">
+						<input type="Submit" value="ADD" class="btn btn"
+							style="background-color: #3f78cc; font-family: Serif; color: white; width: 52%; margin-left: 1%; margin-top: 15%; margin-bottom: 5%;">
 
+					</div>
 				</div>
 			</div>
-		</div>
+		</form>
+
 	</div>
 
 	<script
